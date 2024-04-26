@@ -47,6 +47,8 @@ const Search = () => {
 
     function handleClick (e) {
         console.log(e.target.innerText);
+        setShowDropDown(false);
+        setSearchParam(e.target.innerText);
     }
 
     console.log(users, filteredUser);
