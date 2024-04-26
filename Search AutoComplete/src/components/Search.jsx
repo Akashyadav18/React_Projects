@@ -45,6 +45,10 @@ const Search = () => {
         }
     }
 
+    function handleClick (e) {
+        console.log(e.target.innerText);
+    }
+
     console.log(users, filteredUser);
 
     return (
@@ -56,7 +60,7 @@ const Search = () => {
             }
             <div className=''>
             {
-                showDropDown && <DropDown data={filteredUser}/>
+                showDropDown && <DropDown handleClick={handleClick} data={filteredUser}/>
             }
             </div>
         </div>
